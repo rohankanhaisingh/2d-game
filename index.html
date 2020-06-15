@@ -1,0 +1,82 @@
+﻿<!--
+	By Rohan Kanhaisingh (CEO Corona or Microsoft Visual Studio)
+	https://github.com/rohankanhaisingh
+-->
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Epic 2D Game</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="g.css" rel="stylesheet" />
+    <meta name="description" content="Epic 2D Game">
+    <meta name="keywords" content="Epic 2D Game">
+    <meta name="author" content="Epic 2D Game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image" content="images/icon.gif" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Epic 2D Game" />
+    <meta name="twitter:creator" content="@Epic 2D Game" />
+    <meta name="twitter:domain" content="Epic 2D Game" />
+    <meta name="twitter:title" content="Epic 2D Game" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+</head>
+<body theme="modern">
+    <div class="site">
+        <div class="site-loader">
+
+        </div>
+        <div class="site-view">
+            <canvas class="view" unique-id></canvas>
+
+
+            <div class="ui" unique-id role="overlay">
+                <div class="ui-navbar">
+                    <div class="ui-navbar-player" g-name="player_name" unique-id>
+                        <span>PLAYER 1</span>
+                    </div>
+                    <div class="ui-navbar-hl hl"></div>
+                    <div class="ui-navbar-health">
+                        <div class="ui-navbar-health-track" g-name="player_health"></div>
+                    </div>
+                    <div class="ui-navbar-hl hl"></div>
+                    <div class="ui-navbar-playerproperties">
+                        <div class="ui-navbar-text game-wave" g-name="game_wave" unique-id>
+                            <span>Wave 0</span>
+                        </div>
+                        <div class="ui-navbar-hl hl"></div>
+                        <div class="ui-navbar-text game-coins" g-name="player_coins" unique-id>
+                            <span>0 coins</span>
+                        </div>
+                        <div class="ui-navbar-hl hl"></div>
+                        <div class="ui-navbar-text game-xp" g-name="player_xp" unique-id>
+                            <span>0 XP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-intro" unique-id>
+                    <div class="ui-intro-herotext">
+                        <span>Welcome by this Epic 2D Game</span>
+                    </div>
+                    <div class="ui-intro-controls">
+                        <span>Use WASD and SPACE to move</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./g.js"></script>
+    <script src="main.js" type="module"></script>
+</body>
+</html>

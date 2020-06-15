@@ -1,0 +1,411 @@
+﻿@font-face {
+    src: url(./fonts/Montserrat.woff2);
+    font-family: Montserrat;
+}
+@font-face {
+    src: url(./fonts/RobotoMono-Light.ttf);
+    font-family: RobotoLight;
+}
+
+
+:root {
+    --bg-color: #000;
+}
+
+.site-loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: black;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.view {
+    background: var(--bg-color);
+    display: block;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    cursor: crosshair;
+}
+
+.site {
+    width: auto;
+    height: auto;
+    background: var(--bg-color);
+    user-select: none;
+}
+.site-view {
+    overflow: hidden;
+}
+
+.ui {
+    pointer-events: none;
+}
+
+.player-health {
+    width: 60px;
+    height: 4px;
+    background: #f26363;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.player-health-track {
+    width: 100%;
+    height: 100%;
+    background: #1beb79;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ui-navbar {
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 120;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    user-select: none;
+}
+
+.ui-navbar-player {
+    width: auto;
+    height: auto;
+    float: left;
+    margin-top: 27px;
+    margin-left: 30px;
+}
+
+    .ui-navbar-player span {
+        font-family: Montserrat;
+        color: #e3e3e3;
+        font-size: 19px;
+    }
+
+.ui-navbar-hl {
+    width: 1px;
+    height: 28px;
+    float: left;
+    background: #e3e3e3;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 24px;
+}
+
+.ui-navbar-health {
+    width: 150px;
+    height: 5px;
+    float: left;
+    margin-top: 35px;
+    background: #f26363;
+}
+
+.ui-navbar-health-track {
+    width: 100%;
+    height: 100%;
+    background: #1beb79;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.ui-navbar-text {
+    width: auto;
+    height: auto;
+    float: left;
+    margin-top: 28px;
+}
+
+    .ui-navbar-text span {
+        font-family: RobotoLight;
+        color: #e3e3e3;
+        font-size: 14px;
+    }
+
+
+.ui-enemyhealth {
+    width: 60px;
+    height: 4px;
+    background: transparent;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.ui-enemyhealth-track {
+    width: 100%;
+    height: 100%;
+    background: #ef2929;
+}
+
+@keyframes shake {
+    0% {
+        -webkit-transform: translate(2px, 1px) rotate(0deg);
+    }
+
+    10% {
+        -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        -webkit-transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        -webkit-transform: translate(0px, 2px) rotate(0deg);
+    }
+
+    40% {
+        -webkit-transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        -webkit-transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        -webkit-transform: translate(2px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        -webkit-transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        -webkit-transform: translate(2px, 2px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.view-shake {
+    animation: shake 0.4s linear infinite;
+}
+
+.ui-intro {
+    width: 100%;
+    height: calc(100% - 80px);
+    position: fixed;
+    top: 80px;
+    left: 0;
+    display: none;
+}
+
+.ui-intro-herotext {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+    .ui-intro-herotext span {
+        font-family: Montserrat;
+        color: #e3e3e3;
+        font-size: 50px;
+        letter-spacing: -2px;
+    }
+
+.ui-intro-controls {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.ui-intro-controls span {
+    color: #e3e3e3;
+    font-family: RobotoLight;
+    font-size: 30px;
+}
+
+.console {
+    width: 510px;
+    height: 60vh;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    background: #191919;
+    padding: 10px;
+    border-radius: 0px;
+    display: none;
+}
+
+.console-visible {
+    display: block;
+}
+
+.console-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.console-navbar {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background: rgb(39, 39, 39);
+}
+
+    .console-navbar .navbar-title {
+        width: auto;
+        height: auto;
+        float: left;
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+
+.console-navbar .navbar-title span {
+    font-family: Montserrat;
+    color: #e3e3e3;
+    font-size: 15px;
+}
+
+.console-navbar .navbar-close-button {
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.console-navbar .navbar-close-button div {
+    width: 100%;
+    height: 1px;
+    background: #e3e3e3;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.console-navbar .navbar-close-button div:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.console-navbar .navbar-close-button div:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.console-output {
+    width: 100%;
+    height: calc(100% - 120px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+    .console-output .console-output-log:nth-child(1) {
+        margin-top: 30px;
+    }
+
+.console-output-log {
+    width: 100%;
+    height: auto;
+    padding: 6px 0px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    position: relative;
+    content: "";
+}
+
+    .console-output-log:before {
+        width: 10px;
+        height: 10px;
+        content: ">";
+        position: absolute;
+        top: 1px;
+        bottom: 0;
+        margin: auto;
+        left: 3px;
+        z-index: 12;
+        color: #35de04;
+        font-family: Montserrat;
+        font-size: 10px;
+        align-content: space-around;
+        font-weight: 100;
+    }
+
+    .console-output-log span {
+        font-family: monospace;
+        color: #e3e3e3;
+        font-size: 12px;
+        display: inline-block;
+        margin-left: 20px;
+        word-break: break-word;
+        user-select: text;
+    }
+
+.console-date {
+    color: #4690eb;
+}
+.console-error-variable {
+    color: #f82626;
+}
+.console-error {
+    color: #f26363;
+}
+.console-js-eval-undefined {
+    color: #4e4e4e;
+    font-style: italic;
+}
+.console-js-eval-returned {
+    color: #1beb79;
+}
+.console-get-property-name {
+    color: #db7d1c;
+    border: 1px solid transparent;
+}
+.console-get-property-name:hover {
+    border: 1px solid #c6890d;
+}
+.console-set-property {
+    color: #0d24ad;
+}
+
+.console-input {
+    width: 100%;
+    height: 60px;
+}
+
+    .console-input input {
+        width: 80%;
+        height: 30px;
+        margin: auto;
+        border: none;
+        border-bottom: 1px solid #6c6c6c;
+        color: #e3e3e3;
+        background: none;
+        display: block;
+        font-family: monospace;
+        outline: none;
+        margin-top: 15px;
+    }
